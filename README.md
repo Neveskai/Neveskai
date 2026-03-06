@@ -3,7 +3,7 @@
 **Software Engineer**
 Building scalable web applications, collaborative systems and developer tooling
 
-[@Neveskai](https://github.com/Neveskai) • [wnevesky@gmail.com](mailto:wnevesky@gmail.com) • Brazil
+[@Neveskai](https://github.com/Neveskai) • [neveskai.github.io/Neveskai](https://neveskai.github.io/Neveskai/) • [wnevesky@gmail.com](mailto:wnevesky@gmail.com) • Brazil
 
 ---
 
