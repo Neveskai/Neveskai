@@ -3,6 +3,6 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  // Obrigatório para GitHub Pages: site fica em https://neveskai.github.io/Neveskai/
-  base: '/Neveskai/',
+  // Caminhos relativos para funcionar no GitHub Pages (https://neveskai.github.io/Neveskai/)
+  base: './',
 })
