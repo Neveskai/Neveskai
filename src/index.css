@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root { background: #0f0f23; min-height: 100%; }
+#root { position: relative; }
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+.page-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    135deg,
+    #0f0f23 0%,
+    #1a1a2e 25%,
+    #16213e 50%,
+    #0f3460 75%,
+    #1a1a2e 100%
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.page-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(66, 153, 225, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 153, 225, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+  animation: gridPulse 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.page-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(66, 153, 225, 0.15), transparent);
+  pointer-events: none;
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
