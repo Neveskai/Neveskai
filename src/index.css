@@ -5,50 +5,74 @@
 html, body, #root { background: #0f0f23; min-height: 100%; }
 #root { position: relative; }
 
-/* Animated gradient background */
+/* Animated gradient background — mais suave e profundo */
 @keyframes gradientShift {
-  0%, 100% { background-position: 0% 50%; }
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
   50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
 }
 
 @keyframes gridPulse {
-  0%, 100% { opacity: 0.15; }
-  50% { opacity: 0.25; }
+  0%, 100% { opacity: 0.12; transform: scale(1); }
+  50% { opacity: 0.22; transform: scale(1.02); }
+}
+
+@keyframes glowDrift {
+  0%, 100% { transform: translate(-50%, -20%) scale(1); }
+  33% { transform: translate(-45%, -25%) scale(1.08); }
+  66% { transform: translate(-55%, -15%) scale(0.92); }
 }
 
 .page-bg {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(
-    135deg,
-    #0f0f23 0%,
-    #1a1a2e 25%,
-    #16213e 50%,
-    #0f3460 75%,
-    #1a1a2e 100%
-  );
+  background:
+    linear-gradient(
+      160deg,
+      #0f0f23 0%,
+      #1a1a2e 20%,
+      #16213e 40%,
+      #0f3460 60%,
+      #1a1a2e 80%,
+      #0f0f23 100%
+    );
   background-size: 400% 400%;
-  animation: gradientShift 15s ease infinite;
+  animation: gradientShift 22s cubic-bezier(0.45, 0, 0.55, 1) infinite;
 }
 
+/* Grid com respiração suave */
 .page-bg::before {
   content: '';
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(66, 153, 225, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(66, 153, 225, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
-  animation: gridPulse 8s ease-in-out infinite;
+    linear-gradient(rgba(66, 153, 225, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(66, 153, 225, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+  background-position: 0 0;
+  animation: gridPulse 10s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   pointer-events: none;
 }
 
+/* Glow principal + leve deriva */
 .page-bg::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(66, 153, 225, 0.15), transparent);
+  top: 0;
+  left: 50%;
+  width: 120%;
+  height: 85%;
+  transform: translate(-50%, -20%);
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 0%,
+    rgba(66, 153, 225, 0.22) 0%,
+    rgba(49, 130, 206, 0.08) 35%,
+    transparent 65%
+  );
+  animation: glowDrift 18s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   pointer-events: none;
 }
 
