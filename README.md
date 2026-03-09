@@ -34,7 +34,7 @@ React • Vue.js • TypeScript • Component Architecture • Rich Text Editors
 Tiptap • ProseMirror • Yjs • CRDTs • Real-time collaboration • Document editing platforms
 
 **Backend & APIs**
-Node.js • NestJS • PHP • REST APIs • WebSockets • Redis
+Node.js • NestJS • PHP • REST APIs • WebSockets • Redis • Document conversion (TexLive, InDesign Server) • Automation servers
 
 **Data & Integrations**
 MySQL • API integrations • Financial APIs • ERP systems • Automation pipelines
@@ -53,7 +53,10 @@ I've worked on systems ranging from **collaborative document platforms to enterp
 Some examples of work I've done:
 
 * **Collaborative Rich Text Editor** built with Tiptap, ProseMirror and Yjs
-* **Word Add-in and Adobe InDesign automation scripts**
+* **Word Add-in** for Microsoft Word
+* **InDesign scripts** for automation in Adobe InDesign
+* **Formula conversion service** using TexLive Server (backend)
+* **Comparison bot** to compare physical versions (PDF, InDesign pre-export) with digital content (HTML), using InDesign Server and scripts
 * **ERP and financial system integrations**
 * **Automation tools replacing spreadsheet workflows**
 * **Enterprise portals and web platforms**
@@ -94,19 +97,36 @@ My goal when building systems is to make them **easy to understand, easy to exte
 ## Experience
 
 **Software Engineer — ArcoTech**
-2023 — Present
+Dec 2023 — Present · Remote (Brazil)
+
+* Word Add-in development; InDesign automation scripts; collaborative HTML editor and other applications in the content tribe
+* Formula conversion service (TexLive Server); bot comparing physical artifacts (PDF, InDesign) with digital content (HTML) via InDesign Server and scripts
+* End-to-end ownership from discovery and architecture to implementation
+* React, Nest.js, Redis, Socket.io, Yjs, ExtendScript, Office SDK
 
 **Front-end Developer — Develcode**
-2022 — 2023
+Feb 2022 — Dec 2023 · Remote
+
+* Maintained legacy portals and built new global-scope portal for Instala (Leroy Merlin)
+* React, Google Cloud Platform (GCP), Jest for unit tests
 
 **Front-end Developer — Comeia**
-2022 — 2023
+Apr 2022 — Feb 2023 · Remote (Caruaru, Brazil)
+
+* Delivered features for TeamCulture platform with unit and e2e tests
+* Vue.js, Cypress, Jest
 
 **Web Developer — Boa Comunicação**
-2020 — 2022
+Nov 2020 — Feb 2022 · Hybrid (Aracaju, Brazil)
+
+* Apps Script integrations with Facebook Ads, AdGlare and Google Ads; interface for Looker dashboards
+* Created and maintained WordPress plugins (email dispatch, weather widgets, bulk changes)
 
 **Web Developer — Renovel Renault**
-2019 — 2020
+May 2019 — Oct 2020 · Hybrid (Aracaju, Brazil)
+
+* Automated spreadsheet-based processes: commission calculation, results reporting, sales management, fuel purchase and control (Vue.js, PHP)
+* Integrated ERP and financial APIs with the database
 
 ---
 
